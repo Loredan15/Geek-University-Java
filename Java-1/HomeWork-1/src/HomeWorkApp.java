@@ -31,7 +31,7 @@ public class HomeWorkApp {
     public static void checkSumSign(){
         int a = 5;
         int b = 10;
-        System.out.println(a + b > 0 ? "Сумма положительная" : "Сумма отрицательная");
+        System.out.println(a + b >= 0 ? "Сумма положительная" : "Сумма отрицательная");
     }
 
     public static void printColor(){
