@@ -29,9 +29,9 @@ public class HomeWork2 {
         IsNumberPositive(5);
 
         System.out.println("3.===============");
-        System.out.println(NumberPositive(-10));
-        System.out.println(NumberPositive(0));
-        System.out.println(NumberPositive(10));
+        System.out.println(NumberNegative(-10));
+        System.out.println(NumberNegative(0));
+        System.out.println(NumberNegative(10));
 
         System.out.println("4.===============");
         //Bart Simpson mod on
@@ -41,7 +41,7 @@ public class HomeWork2 {
         System.out.println("5.===============");
         int[] years = {1758, 1867, 1977, 2000, 2020};
         for (int a: years) {
-            isYearLeap(a);
+            System.out.println(isYearLeap(a));
         }
     }
 
@@ -57,8 +57,8 @@ public class HomeWork2 {
         }
     }
 
-    public static boolean NumberPositive(int number){
-        return number >= 0;
+    public static boolean NumberNegative (int number){
+        return number < 0;
     }
 
     public static void PrintString(String string, int counter ){
@@ -67,11 +67,8 @@ public class HomeWork2 {
         }
     }
 
-    public static void isYearLeap(int year){
-        if((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))){
-            System.out.printf("Год %d является високосным\n", year);
-        }else{
-            System.out.printf("Год %d является не високосным\n", year);
-        }
+    public static boolean isYearLeap(int year){
+        return (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0));
+
     }
 }
