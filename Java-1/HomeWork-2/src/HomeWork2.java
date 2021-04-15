@@ -13,9 +13,13 @@
 
  */
 
+
+import org.w3c.dom.ls.LSOutput;
+
 public class HomeWork2 {
 
     public static void main(String[] args) {
+
 
         System.out.println("1.===============");
         System.out.println(SumFrom10To20(5, 4));
@@ -67,8 +71,7 @@ public class HomeWork2 {
         }
     }
 
-    public static boolean isYearLeap(int year){
+    public static boolean isYearLeap(int year) {
         return (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0));
-
     }
 }
