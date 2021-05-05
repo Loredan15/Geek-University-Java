@@ -17,37 +17,22 @@
 
  */
 
-import barriers.Treadmill;
-import barriers.Wall;
-import members.Cat;
-import members.Human;
-import members.Robot;
-
-import java.util.ArrayList;
-import java.util.List;
+import barriers.*;
+import members.*;
 
 public class HomeWork1 {
 
     public static void main(String[] args) {
+        Team team = new Team("Dream team",
+                new Human("Петька", 1500, 4),
+                new Human("Василий Иваныч", 800, 3),
+                new Robot("Электроник", 2500, 1),
+                new Cat("Мурзик", 1800, 5));
+        team.teamInfo();
 
-        List<Object> team = new ArrayList<>();
-        team.add(new Cat("Васька", 1500, 5));
-        team.add(new Human("Петька", 500, 3));
-        team.add(new Robot("Электроник", 2500, 1));
-
-        List<Object> course = new ArrayList<>();
-        course.add(new Treadmill(600));
-        course.add(new Wall(5));
-
-        for (int i = 0; i < team.size(); i++) {
-            String member = team.get(i).getClass().;
-            System.out.println(member);
-            for (int j = 0; j < course.size(); j++) {
-
-            }
-
-
-        }
+        Course course = new Course(new Wall(3), new Treadmill(1600));
+        course.start(team);
+        team.isFinish();
     }
 }
 

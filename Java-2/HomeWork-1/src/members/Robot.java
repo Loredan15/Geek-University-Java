@@ -9,6 +9,7 @@ public class Robot implements RunAction, JumpAction {
     private String name;
     private int runDistance;
     private int jumpHeight;
+    private boolean finish;
 
     public Robot(String name, int runDistance, int jumpHeight) {
         this.name = name;
@@ -20,26 +21,30 @@ public class Robot implements RunAction, JumpAction {
         return name;
     }
 
+    public boolean isFinish() {
+        return finish;
+    }
+
     @Override
-    public boolean jump(Wall wall) {
-        if(wall.getHeight() < jumpHeight){
+    public void jump(Wall wall) {
+        if(wall.getHeight() <= jumpHeight){
             System.out.println(this.getName() + " покорил стену");
-            return true;
+            finish = true;
         }else{
             System.out.println(this.getName() + " не смог покорить стену");
-            return false;
+            finish = false;
         }
 
     }
 
     @Override
-    public boolean run(Treadmill treadmill) {
-        if (treadmill.getLength() < runDistance){
+    public void run(Treadmill treadmill) {
+        if (treadmill.getLength() <= runDistance){
             System.out.println(this.getName() + " успешно пробежал");
-            return true;
+            finish = true;
         }else {
             System.out.println(this.getName() + "не смог пробежать");
-            return false;
+            finish = false;
         }
     }
 }
