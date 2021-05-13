@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="sendButton" layoutX="523.0" layoutY="361.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="25.0" prefWidth="58.0" text="Send" />
+      <TextArea fx:id="chatHistory" editable="false" prefHeight="353.0" prefWidth="600.0" />
+      <TextField fx:id="msgField" layoutX="14.0" layoutY="361.0" onAction="#sendMessage" prefHeight="25.0" prefWidth="490.0" promptText="Введите сообщение" />
+   </children>
+</AnchorPane>
