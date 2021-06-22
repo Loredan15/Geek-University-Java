@@ -3,7 +3,6 @@ import java.util.*;
 public class Phonebook {
     private Map<String, String> data = new HashMap<>();
 
-
     public void add(String surname, String phone){
         data.put(phone, surname);
     }
