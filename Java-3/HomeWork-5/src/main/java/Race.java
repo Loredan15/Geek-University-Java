@@ -1,14 +1,15 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Vector;
 
 public class Race {
-    private ArrayList<Stage> stages;
+    private Vector<Stage> stages;
 
-    public ArrayList<Stage> getStages() {
+    public Vector<Stage> getStages() {
         return stages;
     }
 
     public Race(Stage... stages) {
-        this.stages = new ArrayList<>(Arrays.asList(stages));
+        this.stages = new Vector<>(Arrays.asList(stages));
     }
 }
